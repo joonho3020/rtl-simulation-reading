@@ -1,67 +1,115 @@
 # RTL Simulation Reading Group Notes
 
-## Emulation HW
+## Papers / Patents
+
+### Emulation HW
+
 - [Multiprocessor for HW emulation](https://patents.google.com/patent/US5551013A/en)
 - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
 - [A survey of HW accelerators used in CAD](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5005647)
 - [VLSI Logic and Fault Simulation on GP Parallel Computers](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=215006)
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
+- [Sahara: Massively parallel dedicated hardware for cycle-based logic simulations, Hanamura et. al., 2005](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ecjc.20193)
+- [Speeding Up Look-up-Table Driven Logic Simulation., Murgai et. al., 1999](./resources/emulation/Speeding up lookup table driven logic simulation.pdf)
 
-## Time multiplexed FPGA
+### Time multiplexed FPGA
+
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
-- [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
+- [A CAD framework for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
 
-## Academic attempts
-- [Daniel-Sanchez's stuff](https://dl.acm.org/doi/abs/10.1145/3613424.3614257)
+### Academic attempts
+
+- [Accelerating RTL Simulation with Hardware-Software Co-Design (MICRO 23)](https://dl.acm.org/doi/abs/10.1145/3613424.3614257)
 - [Cyclist](https://dl.acm.org/doi/abs/10.1109/ICCAD.2017.8203892)
-- [Manticore](https://dl.acm.org/doi/10.1145/3623278.3624750)
+  - https://github.com/palmer-dabbelt/flo-llvm
+  - https://github.com/palmer-dabbelt/libflo
+  - Chisel DREAMER emulation platform: https://wiki.eecs.berkeley.edu/dreamer/Main/20141203Notes
+- [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism (ASPLOS 23)](https://dl.acm.org/doi/10.1145/3623278.3624750)
 
-## Compiler partitioning strategy
+### Compiler partitioning strategy
+
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
 - [Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
-- [performance analysis of parallel logic simulation machine](https://pdf.sciencedirectassets.com/272438/1-s2.0-S0743731500X02079/1-s2.0-0743731589900294/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEN%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQC96Gjd%2BKLvdMSdGGiIB1Nle8shJ4PE2Gir5JijBDsSjQIgG0whIkHN0m3gt%2ByfyOhlXgnnLJr1aEMq%2BghQwj1yhmQqvAUIh%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDNQhAHfKKB9kdeab7iqQBbLk6aYHR8aDwOPZPS5Ur%2FUcrbCyLB7zVZXshy89529u71XOpuoICfAOxgMDZ8uDJWG3vQufzayzWDtndqz%2B85CkCpQ5Y58zuV3M%2F8xJ%2F%2FjKTCMWb2LsEH%2BqMKFyoFFSo2eAgNzrm8UwQeKgEb5QKh54mIJpVTp2XIKedETy9WWuRHSwVCtD3QuIUleq8nyA%2F8H%2BWi1GkonJMKsV16YTWkO8Inei9X9vxiBRbra1LTztoQpoLnNa0RIng1kg5mJ7wG0QVMjIw%2BxowIeBiAsBhSI71NNr9zOKcv0cylbodvvtfIZYpZaRIiCdfvl%2FCoD6HSxYTNoUTmyGStjtIz6UPRpRxbp0%2B06AyLRUVb8BFWs8yF0ZoWndpaOetLE6ubeyM4pHxs6zMI4qS5xYK%2FKfBDxq36HUX8XvPdkBqP52T7pgLjR8WFDoVAVgaor9Iu0Za2DWHuMYxGzSVDUN%2F51AZNo4pxZcY%2BAUxwrXn%2Bqe04yzxvx0JdAb%2FX30Xyvlzwc7ePu8ww3Xf%2Fo9ztoyaAb6IIFiODs0zwL2KqjGdqfi526P%2Fw5tmuBUW%2BJvtOpgrAjYQCfa%2BIATCIGH2UrkIS2U%2FzJpj%2FscjdhmT7urwoROuuUkH1yD8%2FJe3z4x3zOj3VxQZqsUBLC7AM1gpeDgwD%2FzCBGLMytOOv2%2FOOLHBd%2Fc%2Bf9xHDVCMy7u2rGRj8fuh%2F23rbOAKgXW91ioQ4%2BwE3kNtOm%2BXnkxXmQDK7Zu3lhBCrKhfRvoAkHF3KYG5USt3TwHQinZL1qjeFx%2Bq%2B4Oe2CJtpee9sMcTuLCLD27waJ0IF0iyNdUjHdBPgG%2BBMuaG8nUu4D8iaT9ohAlBhJxDR5D9rRfT1SGMJks8JiJxYEFz4ndMPD73rMGOrEB4AQTY%2BnLApST0YCil4FjbQhSe5T40s8aWVwG4S6Mu%2BMUMhThy%2Farl2uH%2BDctYEHWE%2B913AEe45XJhuBv4YjwbTtDQ8QMbeie1wpk0jxZSTlR5QHJTR%2Fuj%2FVosZh17wXz2Gb6O44stG9oU20IG0b%2BMPJT8kLBUpvkNY97yzq7l8T%2BSCzTNoDbMrBu9SjBLFM1hoHdynRFX3rV6A8Wj8%2F9F%2FOAi9dcnNV0IuWuutkH4nFg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240623T070840Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYW6NG64XN%2F20240623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4ee524e4b4f06ad0453b7e2b7860f9617c22256b2f24bbc808282fb1f0faab3c&hash=57ffaf87ab9888ca46927e650a5db3b939562bc43f78c92c2b8b2cfaf5638cb3&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=0743731589900294&tid=spdf-05e6a64a-5531-45e0-a975-851b98cb4635&sid=605b979868761044617a90f5bdb504f0b8afgxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=13135f5e585d07540657&rr=8982a5f0dba9983a&cc=us)
+- [performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?)
 
+### FireSim ancestors
 
-## FireSim ancestors
-- [A-ports](https://dl.acm.org/doi/abs/10.1145/1344671.1344685?casa_token=_OCwPu2rFnsAAAAA:w7SgQRpOhSmdMfT2ZfL7aSzj94JopQDwsOYbmX036uij7CYRoqAmA7V-k_WjKZ-wTT09yCN2ElP0cw)
+- [FPGA-Accelerated Simulation Technologies (FAST): Fast, Full-System, Cycle-Accurate Simulators (MICRO 2007)](https://ieeexplore.ieee.org/abstract/document/4408260)
+- [RAMP: Research Accelerator for Multiple Processors (IEEE Micro 2007)](https://ieeexplore.ieee.org/abstract/document/4287395)
+- [RAMP Blue: A Message-Passing Manycore System in FPGAs (FPL 2007)](https://ieeexplore.ieee.org/abstract/document/4380625)
+- [RAMP Blue: Implementation of a Manycore 1008 Processor FPGA System (RSSI 2008)](http://people.eecs.berkeley.edu/~krste/papers/Burke_RAMP_Blue_RSSI_2008.pdf)
+- [A-Ports: an efficient abstraction for cycle-accurate performance models on FPGAs (FPGA 2008)](https://dl.acm.org/doi/pdf/10.1145/1344671.1344685)
+- [Quick Performance Models Quickly: Closely-Coupled Partitioned Simulation on FPGAs (ISPASS 2008)](https://ieeexplore.ieee.org/abstract/document/4510733)
+- [A-Port Networks: Preserving the Timed Behavior of Synchronous Systems for Modeling on FPGAs (2009)](https://dl.acm.org/doi/abs/10.1145/1575774.1575775)
+- [ProtoFlex: Towards Scalable, Full-System Multiprocessor Simulations Using FPGAs (2009)](https://dl.acm.org/doi/abs/10.1145/1534916.1534925)
+- [The Future of Architectural Simulation (IEEE Micro 2010)](https://ieeexplore.ieee.org/abstract/document/5506934)
+- [RAMP gold: an FPGA-based architecture simulator for multiprocessors (DAC 2010)](https://dl.acm.org/doi/abs/10.1145/1837274.1837390)
+- [A case for FAME: FPGA architecture model execution (ISCA 2010)](https://dl.acm.org/doi/abs/10.1145/1815961.1815999)
+- [HAsim: FPGA-based high-detail multicore simulation using time-division multiplexing (HPCA 2011)](https://ieeexplore.ieee.org/abstract/document/5749747)
+- [Leveraging latency-insensitivity to ease multiple FPGA design (FPGA 2012)](https://dl.acm.org/doi/abs/10.1145/2145694.2145725)
+- [A cycle-accurate, cycle-reproducible multi-FPGA system for accelerating multi-core processor simulation (FPGA 2012)](https://dl.acm.org/doi/abs/10.1145/2145694.2145720)
+- [Golden Gate: Bridging The Resource-Efficiency Gap Between ASICs and FPGA Prototypes (ICCAD 2019)](https://ieeexplore.ieee.org/abstract/document/8942087)
+- [FASED: FPGA-Accelerated Simulation and Evaluation of DRAM (FPGA 2019)](https://dl.acm.org/doi/abs/10.1145/3289602.3293894)
 
-## HDL history
+### HDL history
+
 - [Hardware design and description languages in IBM](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5390297)
+- [A Golden Age of Hardware Description Languages: Applying Programming Language Techniques to Improve Design Productivity (SNAPL 2019)](https://drops.dagstuhl.de/storage/00lipics/lipics-vol136-snapl2019/LIPIcs.SNAPL.2019.7/LIPIcs.SNAPL.2019.7.pdf)
 
-## Power, gate level simultion
+### Power, gate level simultion
+
 - CPF_palladium
 - LowPowerCPF-Simulation-Guide
 
-Sahara: Massively parallel dedicated hardware for cycle-based logic simulations, Hanamura et. al., 2005
-[Speeding Up Look-up-Table Driven Logic Simulation., Murgai et. al., 1999](./resources/emulation/Speeding up lookup table driven logic simulation.pdf)
+### Software RTL Simulation
+
+- [LiveSim: A Fast Hot Reload Simulator for HDLs (ISPASS 2020)](https://ieeexplore.ieee.org/abstract/document/9238634)
+- [A Case for Accelerating Software RTL Simulation by Scott Beamer (IEEE Micro 20)](https://ieeexplore.ieee.org/abstract/document/9099598)
+- [ESSENT: Efficiently Exploiting Low Activity Factors to Accelerate RTL Simulation (DAC 20)](https://ieeexplore.ieee.org/abstract/document/9218632)
+- [Fast behavioural rtl simulation of 10b transistor soc designs with metro-mpi (DATE 23)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10137080)
+- [RepCut: Superlinear Parallel RTL Simulation with Replication-Aided Partitioning (ASPLOS 23)](https://dl.acm.org/doi/abs/10.1145/3582016.3582034)
+- [On Accelerating PyRTL Simulation with Essential Signal Simulation Techniques (ISEDA 23)](https://ieeexplore.ieee.org/abstract/document/10218453)
+- [Khronos: Fusing Memory Access for Improved Hardware RTL Simulation (MICRO 23)](https://dl.acm.org/doi/abs/10.1145/3613424.3614301)
+- [TaroRTL: Accelerating RTL Simulation using Coroutine-based Heterogeneous Task Graph Scheduling (Euro-Par 24)](https://jsm.ece.wisc.edu/docs/lin-europar2024.pdf)
+
+### HW-Accelerated (Non-FPGA) RTL Simulation
+
+- [RTLFlow: From RTL to CUDA: A GPU Acceleration Flow for RTL Simulation with Batch Stimulus (ICPP 22)](https://dl.acm.org/doi/abs/10.1145/3545008.3545091)
+- [Parendi: Thousand-Way Parallel RTL Simulation (Arxiv Preprint 24)](https://arxiv.org/abs/2403.04714)
 
 ---
-# Tentative schedule
 
-# Week 1 - uarch
+## Tentative schedule
+
+## Week 1 - uarch
+
 - [Multiprocessor for HW emulation](https://patents.google.com/patent/US5551013A/en)
 
-# Week 2 - uarch
+## Week 2 - uarch
+
 - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
 
-# Week 3 - compiler
+## Week 3 - compiler
+
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
 - [Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)
 
-# Week 4 - compiler
+## Week 4 - compiler
+
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
 
-# Week 5 - Power & gate level simulation
+## Week 5 - Power & gate level simulation
+
 - CPF_palladium (cadence manual)
 - LowPowerCPF-Simulation-Guide (cadence manual)
 
-# Week 6 - FPGA based emulation
+## Week 6 - FPGA based emulation
+
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
-
