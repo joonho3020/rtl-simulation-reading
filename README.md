@@ -1,6 +1,6 @@
 # RTL Simulation Reading Group Notes
 
-## Emulation HW/compiler
+## Emulation HW
 - [Multiprocessor for HW emulation](https://patents.google.com/patent/US5551013A/en)
 - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
