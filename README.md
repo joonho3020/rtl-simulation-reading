@@ -54,10 +54,11 @@
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
 
-# Week 5 - FPGA based emulation
+# Week 5 - Power & gate level simulation
+- CPF_palladium (cadence manual)
+- LowPowerCPF-Simulation-Guide (cadence manual)
+
+# Week 6 - FPGA based emulation
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
 
-# Week 6 - Power & gate level simulation
-- CPF_palladium (cadence manual)
-- LowPowerCPF-Simulation-Guide (cadence manual)
