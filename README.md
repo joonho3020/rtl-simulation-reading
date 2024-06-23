@@ -35,6 +35,9 @@
 - CPF_palladium
 - LowPowerCPF-Simulation-Guide
 
+Sahara: Massively parallel dedicated hardware for cycle-based logic simulations, Hanamura et. al., 2005
+[Speeding Up Look-up-Table Driven Logic Simulation., Murgai et. al., 1999](./resources/emulation/Speeding up lookup table driven logic simulation.pdf)
+
 ---
 # Tentative schedule
 
