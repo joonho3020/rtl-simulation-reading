@@ -90,26 +90,34 @@
 
 ## Week 2 - uarch
 
-- [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
 
 ## Week 3 - compiler
 
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
-- [Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)
 
 ## Week 4 - compiler
+
+- [Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)
+
+## Week 5 - compiler
 
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
 
-## Week 5 - Power & gate level simulation
+
+## Week 6 - misc
+
+- [performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?)
+- [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
+
+## Week 7 - Power & gate level simulation
 
 - CPF_palladium (cadence manual)
 - LowPowerCPF-Simulation-Guide (cadence manual)
 
-## Week 6 - FPGA based emulation
+## Week 8 - FPGA based emulation
 
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
