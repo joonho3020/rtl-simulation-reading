@@ -88,6 +88,46 @@
 
 - [Multiprocessor for HW emulation](https://patents.google.com/patent/US5551013A/en)
 
+### Summary
+
+#### Processor design
+
+- Instructions execute step by step (no control flow, fixed set of instructions in IMEM). Each iteration through the instruction memory corresponds to one target cycle
+- Two data memory (denoted as input/data stack)
+    - In each step, the function bit out (FBO) is stored in the data stack
+    - In each step, the input from the switch is stored in the input stack. Instruction encodes which other processor to accept the incoming switch bit from (a bit can be ignored or broadcasted to X other processors)
+    - Need to perform logic computation in a BFS manner in order to use the values created from previous steps
+- LUTs are configured to simulate arbitrary N-1 gates. Operands are read from the input/data stack.
+- Bits can be forwarded to nearby processor (N-3 ~ N+3) instead of going through the network.
+    - Way of saving one cycle: if the bit goes over the network, to use it, the processor has to store it in the input stack and use it in the following cycle
+- Instruction memory is split into two parts: left and right
+    - For logic emulation, left and right both encodes the operation to perform
+    - For memory (SRAM?) emulation, the right instruction is essentially the data array. 16 processors are grouped and a bit from each group is used to generate the address for the memory operation
+
+#### Emulation module, board, platform
+
+- Module
+    - 64 processors are grouped together as a module
+    - All the processors within a module are connected as a crossbar
+- Board
+    - Collection of emulation modules
+    - Module ports are connected in a pre-configured fashion
+- Platform
+    - Collection of boards, DRAM(?), host communication logic, and other platform control logic
+- Need to synchronize across every cycle across all boards. How sould this global synchronization achieved? Also can we allow certain parts to slip ahead of this global synchronization barrier (I think we can, but the  benefit might not be significant due to straggler effects)
+
+
+### Discussion/Questions
+
+- Should the compiler always cut across register boundaries?
+    - If a RTL block mapped to a single processor contains sequential logic, the processor cannot use the bit in the data stack that correpsonds to the FF as it will be overwritten. So that bit must go across the network and come back and the compiler would have to insert NOPs. -> utilization vs performance tradeoff
+    - Alternatively, can double the on-chip memory so that each half can work like a master (producing bits) and slave (storing bits for the next cycle). This enables more partitioning flexibility in the compiler but decreases area efficiency of the processors
+- How many processors can fit in a single FPGA & how many processors/modules/boards would we need to simulate a reasonably sized CY SoC?
+- What are some problems that might show up when scaling this system up in such a way that it can support a billion gate simulation?
+- (Since this word seems like some magic keyword to people) Heterogeneous integration of processor designs? Can we design certain modules/blocks to have different number of operands, bitwidth, ... to optimize for area & performance?
+- How to do X-propagation? We can encode that by just using 2 bits instead of 1 bit so I guess this won't really be a problem. But can we formally prove that certain parts of the design won't have X's and just use the 2 bits to store actually 2 bits?
+
+
 ## Week 2 - uarch
 
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
