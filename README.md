@@ -114,7 +114,7 @@
     - Module ports are connected in a pre-configured fashion
 - Platform
     - Collection of boards, DRAM(?), host communication logic, and other platform control logic
-- Need to synchronize across every cycle across all boards. How sould this global synchronization achieved? Also can we allow certain parts to slip ahead of this global synchronization barrier (I think we can, but the  benefit might not be significant due to straggler effects)
+- Need to synchronize across every cycle across all boards. How should this global synchronization achieved? Also can we allow certain parts to slip ahead of this global synchronization barrier (I think we can, but the  benefit might not be significant due to straggler effects)
 
 
 ### Discussion/Questions
