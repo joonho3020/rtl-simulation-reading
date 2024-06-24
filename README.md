@@ -139,13 +139,12 @@
 
 ## Week 4 - compiler
 
-- [Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)
+- [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
 
 ## Week 5 - compiler
 
+- ~~~[Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)~~~
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
-- [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
-
 
 ## Week 6 - misc
 
