@@ -125,7 +125,7 @@
 - How many processors can fit in a single FPGA & how many processors/modules/boards would we need to simulate a reasonably sized CY SoC?
 - What are some problems that might show up when scaling this system up in such a way that it can support a billion gate simulation?
 - (Since this word seems like some magic keyword to people) Heterogeneous integration of processor designs? Can we design certain modules/blocks to have different number of operands, bitwidth, ... to optimize for area & performance?
-- How to do X-propagation? We can encode that by just using 2 bits instead of 1 bit so I guess this won't really be a problem. But can we formally prove that certain parts of the design won't have X's and just use the 2 bits to store actually 2 bits?
+- How to do X-propagation? We can encode that by just using 2 bits instead of 1 bit but that will have a significant area overhead. However, the most recent palladium started supporting X-propagation as well. Maybe they only have certain processors that have X-modeling while most processors only support 2 state simulation? Static analysis to identify gates that will not be X's for certain.
 
 
 ## Week 2 - uarch
