@@ -80,6 +80,9 @@
 - [RTLFlow: From RTL to CUDA: A GPU Acceleration Flow for RTL Simulation with Batch Stimulus (ICPP 22)](https://dl.acm.org/doi/abs/10.1145/3545008.3545091)
 - [Parendi: Thousand-Way Parallel RTL Simulation (Arxiv Preprint 24)](https://arxiv.org/abs/2403.04714)
 
+### FPGA overlay
+- [Overgen](https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf)
+
 ---
 
 ## Tentative schedule
@@ -188,7 +191,11 @@
 - CPF_palladium (cadence manual)
 - LowPowerCPF-Simulation-Guide (cadence manual)
 
-## Week 8 - FPGA based emulation
+## Week 8 - FPGA overlay
+
+- [Overgen](https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf)
+
+## Week 9 - FPGA based emulation
 
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
