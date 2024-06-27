@@ -116,6 +116,38 @@
     - Collection of boards, DRAM(?), host communication logic, and other platform control logic
 - Need to synchronize across every cycle across all boards. How should this global synchronization achieved? Also can we allow certain parts to slip ahead of this global synchronization barrier (I think we can, but the  benefit might not be significant due to straggler effects)
 
+---
+
+- Can connect multiple processors to simulate logic where the logic depth is larger than the max steps
+    - The performance degradation as the target design size increases is gradual
+- Inter board communication has to happen in fixed latency / compiler is aware of the latency (to the compiler, the link doesn't really matter except that the scheduling might change a little bit)
+- Need to have a core that can run testbench code near the machine (display messages, assertions, C++ models ...)
+- For 4 state, just use software and inject state
+    - However, there are other cases where 4 state sim make sense : external IP can inject 4 state, low power simulation...
+    - Cadence added support for X-prop in their latest Palladium
+    - Problem with X-prop is that you have to use 2 bits to simulate a single bit (00 -> 0, 01 -> 1, 10 -> X, 11 -> Z) but can be very area inefficient (especially X's are a rare state compared to just 0 & 1)
+    - But for the problems that we are trying to deal with (functional & performance verification) 2 state simulation may be sufficient
+- Expanding SRAM depth is cheap because we can use custom macros
+    - So when you can increase the frequency of the design, you would want to increase the SRAM depth so that each processor can emulate more gates w/o performance loss
+    - However, if the frequency is fixed, increasing the number of steps per cycle translates to lower simulation perf
+    - So that seems to be the reason that the IBM people found out 128 steps
+    - Need to find the optimal step for FPGA & ASIC w/ modern technology nodes.
+- One implementation option: add the processor grid as a FireSim LI-BDN where the interface is fixed (e.g., your tile)
+    - Can share the FireSim bridge/IO infrastructure
+    - Can save FPGA resources by mapping parts of the design directly on the FPGA and only the part where you anticipate RTL changes on the emulation processors
+    - For Fpga overlay (300 MHz), may have to make the network more simple to save FPGA routing resources
+        - The compiler has to be aware of the network latency (network has to be designed to have static latency & maps well onto an FPGA in such a way it matches switch boxes well)
+        - The compiler has to be able to pipeline instructions to hide extra network latency
+    - GCD is a good place to start
+    - FMR will increase (perhaps similar to when running TracerV)
+        - Jerry's opinion is that we shouldn't try to compromise on performance
+        - In my opinion, this is somewhat inevitable and not too bad
+- Approximating how many gates we can emulate when using a FPGA overlay
+    - FPGA can simulate N ASIC gates
+    - Each emulation processor corresponds to M ASIC gates, and has max T steps (T gates)
+        - M has to take account of the network
+    - Gates that can be emulated is approximately (N / M * T)
+    - Need to measure T/M by implementing a dummy module and building a bitstream with it
 
 ### Discussion/Questions
 
