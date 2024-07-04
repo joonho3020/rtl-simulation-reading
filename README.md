@@ -162,43 +162,42 @@
 - (Since this word seems like some magic keyword to people) Heterogeneous integration of processor designs? Can we design certain modules/blocks to have different number of operands, bitwidth, ... to optimize for area & performance?
 - How to do X-propagation? We can encode that by just using 2 bits instead of 1 bit but that will have a significant area overhead. However, the most recent palladium started supporting X-propagation as well. Maybe they only have certain processors that have X-modeling while most processors only support 2 state simulation? Static analysis to identify gates that will not be X's for certain.
 
-
 ## Week 2 - uarch
 
 - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
 
-## Week 4 - compiler
+## Week 3 - uarch
 
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
 
-## Week 5 - compiler
+## Week 4 - compiler
 
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
 
-## Week 6 - compiler
+## Week 5 - compiler
 
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
 
-## Week 7 - compiler
+## Week 6 - compiler
 
 - ~~~[Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)~~~
 - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
 
-## Week 8 - misc
+## Week 7 - misc
 
-- [performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?)
+- [Performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?)
 - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
 
-## Week 9 - Power & gate level simulation
+## Week 8 - Power & gate level simulation
 
 - CPF_palladium (cadence manual)
 - LowPowerCPF-Simulation-Guide (cadence manual)
 
-## Week 10 - FPGA overlay
+## Week 9 - FPGA overlay
 
 - [Overgen](https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf)
 
-## Week 11 - FPGA based emulation
+## Week 10 - FPGA based emulation
 
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
