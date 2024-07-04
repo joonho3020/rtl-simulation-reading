@@ -164,7 +164,8 @@
 
 ## Week 2 - uarch
 
-- [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479)
+<!-- - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479) -->
+- [Yorktown simulation engine](https://dl.acm.org/doi/pdf/10.5555/800263.809186)
 
 ## Week 3 - uarch
 
