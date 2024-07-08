@@ -168,6 +168,38 @@
 <!-- - [Yorktown simulation engine](https://ieeexplore.ieee.org/document/1585479) -->
 - [Yorktown simulation engine](https://dl.acm.org/doi/pdf/10.5555/800263.809186)
 
+### Discussion
+- What is the GDM for? Why not just use LUTs like in the patent
+- Go over SRAM emulation
+
+- What does it mean to propagate the clock distribution logic?
+    - It must be due to how their clock distribution network is designed
+    - Pre multi-clock domain ages
+    - Can simulate clock gating, however there is no performance benefit from logic skipping
+    - You can have logic in the clock tree -> clock in is a combinational of some data & clock
+    - So you can simulate a FF as transistors, gate and functiona level, as you go down the abstraction takes more cycles to simulate a single FF
+- 4 state simulation support
+    - Can model x optimixim & pessimism
+- Very different from cyclist
+- If there is slipping, it has to be fixed amount because you will need memory to perform some sort of bookkeeping
+- Skipping has to happen in a coarse-grained manner & the parts that can be skipped at the same time has to be pre-determined
+    - Also the amount of host cycles that can be skipped has to be predetermined & known by the compiler -> kind of reaches a multicore simulation logic
+    - However, the simulation throughput is determined by the worst case processor steps
+- Core functional logic
+    - GDM : it is for x-prop pess & opt for tuning (for 4 state simulation)
+        - x opt: X & 1 -> 0 or 1
+        - x pess: X & 1 -> X
+        - x symbolic: if the output can be proved, use that value (even with this, there are cases when you need x prop for registers in RR-arbiter)
+        - interrupt logic
+            - propagation of X when happens after a certain point in simulation to check if x prop breaks stuff
+            - can be used to generate trigger conditions
+- vs Quickturn
+    - much more effort was put to perform 4 state sim & clock gating modeling
+    - possibly because they had low confidence about their digital logic
+    - z3 has 4 state -> (emulated 4 state by using multiple bits, probably x-optimistic simulation)
+- How clock trees are modeled in modern palladiums
+
+
 ## Week 3 - uarch
 
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
