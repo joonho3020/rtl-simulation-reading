@@ -20,6 +20,7 @@ FPGA overlay-oriented emulation hardware and techniques for word-level FPGA comp
 
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231) (CICC 1995, UToronto)
 - [A CAD framework for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441) (FPGA 2011, UBC)
+- [Hoplite: Building Austere Overlay NoCs for FPGAs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7293956) (FPL 2015)
 - [Overgen](https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf) (MICRO 2022)
 
 ### Academic Attempts at Emulation
