@@ -61,6 +61,7 @@
 
 ### Power, gate level simultion
 
+- [Using a hardware simulation engine for custom MOS structured designs](https://ieeexplore.ieee.org/abstract/document/5390298)
 - CPF_palladium
 - LowPowerCPF-Simulation-Guide
 
