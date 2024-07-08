@@ -203,6 +203,7 @@
 ## Week 3 - uarch
 
 - [Logic simulation engines in Japan](https://ieeexplore.ieee.org/abstract/document/43078?casa_token=nD2xnLdyzTYAAAAA:rY_2eFFqS8Imhzso9TwMOKM2qQ6E5eQ0rZVc54LK_iRS4cVwM2CNewPATFflru2O-nGR-r7kvNg)
+- [Sahara: Massively parallel dedicated hardware for cycle-based logic simulations, Hanamura et. al., 2005](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ecjc.20193)
 
 ## Week 4 - compiler
 
