@@ -207,6 +207,16 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
 
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
 
+
+- Compiler/HW complexity tradeoffs
+    - Unit delay model vs rank order
+    - How does this tradeoff space differ from FPGAs vs ASIC?
+- Partitioning & instruction scheduling
+    - When partitioning, should we try to partition across register boundaries? Or if we have a partition that is balanced & minimizes communication, would that also be a nice partition?
+- What is a nice interface/method to load the compiled instructions into these processors?
+    - FESVR -> too slow?
+    - ???
+
 ## Week 5 - compiler
 
 - [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
