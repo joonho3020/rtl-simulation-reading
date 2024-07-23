@@ -13,6 +13,8 @@ Custom ASIC-based emulation hardware produced by industry.
 - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en) (Patent 1997, Quickturn / Cadence)
 - [Speeding Up Look-up-Table Driven Logic Simulation](https://link.springer.com/chapter/10.1007/978-0-387-35498-9_34) (Springer 1999, Fujitsu)
 - [Sahara: Massively Parallel Dedicated Hardware for Cycle-Based Logic Simulations](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ecjc.20193) (Wiley 2005, Fujitsu)
+- [ibm logic engine](./resources/emulation/ibm_logic_engine.pdf)
+- [ibm logic engine 2](./resources/emulation/ibm_lse_2.pdf
 
 ### FPGA Overlays
 
@@ -206,7 +208,7 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
 ## Week 4 - compiler
 
 - [Yorktown simulation SW support](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1585481)
-
+- [ibm logic engine](./resources/emulation/ibm_logic_engine.pdf)
 
 - Compiler/HW complexity tradeoffs
     - Unit delay model vs rank order
