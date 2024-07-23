@@ -24,6 +24,14 @@ FPGA overlay-oriented emulation hardware and techniques for word-level FPGA comp
 - [A CAD framework for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441) (FPGA 2011, UBC)
 - [Hoplite: Building Austere Overlay NoCs for FPGAs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7293956) (FPL 2015)
 - [Overgen](https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf) (MICRO 2022)
+- [grvi-phalanx](https://fpga.org/grvi-phalanx/)
+    - FPGA efficient implementation of a RISC-V processor
+    - 2/3 stage
+    - Each processor takes about 320 6 LUTS and the design closes timing at 300MHz
+- [hoplite](https://fpga.org/hoplite/)
+    - FPGA efficient implementation of a NoC
+    - Seems like they support the mesh topology, would need to profile the design to decide the amount of fanout
+    - Scheduling becomes much mor difficult with this constraint (which is also why this is interesting)
 
 ### Academic Attempts at Emulation
 
