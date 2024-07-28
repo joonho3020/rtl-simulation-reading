@@ -229,6 +229,7 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
     - How does this tradeoff space differ from FPGAs vs ASIC?
 - Partitioning & instruction scheduling
     - When partitioning, should we try to partition across register boundaries? Or if we have a partition that is balanced & minimizes communication, would that also be a nice partition?
+    - Linker: can it link arbitrary boundaries or are there any conditions for these link boundaries? How can we use the permuters for incremental compilation flows?
 - What is a nice interface/method to load the compiled instructions into these processors?
     - FESVR -> too slow?
     - ???
