@@ -14,7 +14,7 @@ Custom ASIC-based emulation hardware produced by industry.
 - [Speeding Up Look-up-Table Driven Logic Simulation](https://link.springer.com/chapter/10.1007/978-0-387-35498-9_34) (Springer 1999, Fujitsu)
 - [Sahara: Massively Parallel Dedicated Hardware for Cycle-Based Logic Simulations](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ecjc.20193) (Wiley 2005, Fujitsu)
 - [ibm logic engine](./resources/emulation/ibm_logic_engine.pdf)
-- [ibm logic engine 2](./resources/emulation/ibm_lse_2.pdf
+- [ibm logic engine 2](./resources/emulation/ibm_lse_2.pdf)
 
 ### FPGA Overlays
 
@@ -236,7 +236,8 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
 
 ## Week 5 - compiler
 
-- [Multiple-level partitioning: an application to the very large-scale hardware simulator](https://ieeexplore.ieee.org/abstract/document/78241?casa_token=DJP4vvOHJxMAAAAA:GWONYTISKBjXjdnueyLsLCknZq9MFjiwGPbg-UCdpj6g05_DYEf6nEZebsIC7V-cXWlgTMNbILY)
+- [Cyclist](https://dl.acm.org/doi/abs/10.1109/ICCAD.2017.8203892) (ICCAD 2017)
+- [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism](https://dl.acm.org/doi/10.1145/3623278.3624750) (ASPLOS 2023)
 
 ## Week 6 - compiler
 
