@@ -237,17 +237,54 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
 ## Week 5 - compiler
 
 - [Cyclist](https://dl.acm.org/doi/abs/10.1109/ICCAD.2017.8203892) (ICCAD 2017)
-- [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism](https://dl.acm.org/doi/10.1145/3623278.3624750) (ASPLOS 2023)
+
+### Cyclist
+- No traction at all, sad
+- Related work
+    - Compared against EVE, YSE
+    - Palladium 100 million gates an hour
+        - compilation performance strong scaling with more cores -> most of the compilation time is in partitioning
+    - **Malibu (another related work)**
+- simulates in the RTL operator level -> datapath width vs simulator platform capacity tradeoff
+- Uarch
+    - Modified Rocket, 32 bit wide instruction
+    - No custom logic function, it uses ALUs to perform computation
+    - ISA
+        - log2: are they recovering the RTL semantics to find use cases for log2 (find highest bit, because in chisel, this circuit is blasted out)
+        - cat: more of a consequence of FIRRTL having Cat & made implementation easier
+        - mul: extreme -> may be area inefficient to have in every single emulation core
+    - 32 architectural registers
+        - They didn't want to spend too much time
+    - Explicit NOPs to resolve data hazards
+    - Only neighbor to neighbor routing -> a lot of cycles are spent routing data across the network
+    - Can broadcast outputs to all the neighbors
+- Debug
+    - Nice engineering
+    - Capture IO traces and replay them later
+- Utilization only 4%
+- Pay as you go
+    - perform annealing to come up with a better compilation output while loading & running the simulation
+    - high engineering effort, but not impossible
+    - must maintain a mapping of new compilation, done on the host
+- Interactive visibility
+    - Find signal at a particular point in time
+    - Take peridoic snapshots & replay
+    - Only 12% perf slowdown (in Palladium, it is like 2 ~ 5x)
 
 ## Week 6 - compiler
 
-- ~~~[Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)~~~
-- [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303)
+- [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism](https://dl.acm.org/doi/10.1145/3623278.3624750) (ASPLOS 2023)
+
+<!-- - ~~~[Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)~~~ -->
+<!-- - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303) -->
 
 ## Week 7 - misc
 
-- [Performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?)
-- [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en)
+- Malibu
+- Nexsus (in manticore)
+
+<!-- - [Performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?) -->
+<!-- - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en) -->
 
 ## Week 8 - Power & gate level simulation
 
