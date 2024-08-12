@@ -234,7 +234,7 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
     - FESVR -> too slow?
     - ???
 
-## Week 5 - compiler
+## Week 5 - academic
 
 - [Cyclist](https://dl.acm.org/doi/abs/10.1109/ICCAD.2017.8203892) (ICCAD 2017)
 
@@ -271,20 +271,48 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
     - Take peridoic snapshots & replay
     - Only 12% perf slowdown (in Palladium, it is like 2 ~ 5x)
 
-## Week 6 - compiler
+## Week 6 - academic
 
 - [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism](https://dl.acm.org/doi/10.1145/3623278.3624750) (ASPLOS 2023)
 
-<!-- - ~~~[Load and Communications Balancing on Multiprocessor Logic Simulation Engines](https://web.archive.org/web/20170222020308id_/http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1814&context=cse_research)~~~ -->
-<!-- - [Efficient circuit partitioning algorithms for parallel logic simulation](https://dl.acm.org/doi/abs/10.1145/76263.76303) -->
+- Recap:
+    - Cyclist: msg passing btw cores (mesh), low utilization
+    - neighbor to neighbor results in low utilization
+- Manticore:
+    - No message passing
+        - Bulk synchronous parallelism (separate bit shuffling phase)
+        - 2D torus network
+        - Leads to low utilization
+        - Enables the compiler to perform core local scheduling of instructions
+        - However, while performing the communication phase the compiler still has to be aware of the NoC traffic and make sure things don't collide
+    - Statically scheduled via compiler
+    - Verilator is the baseline, but not a fair comparison, but similar to verilator and repcut, it uses a bulk synchronous execution model
+    - Each tile is larger because of the above execution model
+        - State has to be duplicated & maintained within each tile
+    - 14 stage pipeline
+        - Specialized to FPGAs
+        - No interlocks, compiler is inserting NOPs
+    - Large datapath & low utilization
+    - Custom function unit
+        - Particular design
+    - Results
+        - 2x compared to Rocket / cannot extract out enough parallelism to compete with Xeons
+        - No utilization, NOPs...
+
+- Taxanomy
+    - Event driven vs static -> where is the static dynamic boundary? accessing SRAM?
+    - Bulk synch vs fine-grained msg passing
+    - Core compute element (LUT vs ALU)... degree to how close it looks like a LUT / datapath width
+    - Synch vs intra cycle Timing
+    - 4 state simulation support
+    - Memory and encoding support / how are SRAMs are mapped
+
+
 
 ## Week 7 - misc
 
-- Malibu
-- Nexsus (in manticore)
-
-<!-- - [Performance analysis of parallel logic simulation machine](https://www.sciencedirect.com/science/article/pii/0743731589900294?) -->
-<!-- - [Emulating multi-ported memory circuits](https://patents.google.com/patent/US5940603A/en) -->
+- [Malibu](https://people.ece.ubc.ca/lemieux/publications/grant-fpga2011.pdf)
+- [Nexus](https://woset-workshop.github.io/PDFs/2022/1-Birch-paper.pdf)
 
 ## Week 8 - Power & gate level simulation
 
