@@ -327,3 +327,24 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
 
 - [Time multiplexed FPGA architecture for logic emulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=518231)
 - [CAD fromwork for Malibu: an FPGA with time-multiplexed coarse-grained elements](https://dl.acm.org/doi/abs/10.1145/1950413.1950441)
+
+---
+
+## [ParSGCN: Bridging the Gap Between Emulation Partitioning and Scheduling](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10663266)
+
+- A good partition doesn't mean the scheduling results will be good
+- They found out that "good partitions" usually contains certain nets in the partition cuts
+    - What does "certain nets" mean in this context?
+    - Probably is some structural characteristic of the graph
+- They train a GCN to obtain a probability `P(e)` where `e` represents the net and `P` represents the probablity that it will be included in the partition cut
+- During the partitioning process, they use the GCN to guide partitioning decisions so that the scheduling quality will be high
+- To limit the explosion of compute requirements, they only apply the above technique in the final partitioning step (where subpartitions are again partitioned onto emulation processors)
+- But what are the characteristics of the nodes that have high `P(e)` vs the ones that do not? This isn't revealed from the paper
+- The results look quite promising and they seemed to have used Palladium compilers as the baseline. (avg 10% less steps than the Palladium compiler for open source designs, max up to 33% less steps)
+- It seems like the `KaHyPar` partitioner provides pretty decent compilation results as well though
+
+## [Sphinx: A Hybrid Boolean Processor-FPGA Hardware Emulation System](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323694)
+
+- FPGA + boolean processor approach
+
+## [HW design and CAD for processor based logic emulation systems](https://core.ac.uk/download/pdf/127678602.pdf)
