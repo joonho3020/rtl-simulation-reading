@@ -42,6 +42,7 @@ Academic efforts to create emulation hardware either using an FPGA overlay or mo
   - [Chisel DREAMER emulation platform](https://wiki.eecs.berkeley.edu/dreamer/Main/20141203Notes)
 - [Accelerating RTL Simulation with Hardware-Software Co-Design](https://dl.acm.org/doi/abs/10.1145/3613424.3614257) (MICRO 2023)
 - [Manticore: Hardware-Accelerated RTL Simulation with Static Bulk-Synchronous Parallelism](https://dl.acm.org/doi/10.1145/3623278.3624750) (ASPLOS 2023)
+  - [A 475 MHz Manycore FPGA Accelerator for RTL Simulation - Manticore implementation paper](https://dl.acm.org/doi/pdf/10.1145/3626202.3637579) (FPGA 2024)
 
 ### Compiler Partitioning Strategy
 
